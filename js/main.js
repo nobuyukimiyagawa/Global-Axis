@@ -155,19 +155,6 @@ document.querySelectorAll(".rm-title").forEach(title => {
   });
 });
 
-gsap.utils.toArray(".rm-image").forEach(img => {
-  gsap.to(img, {
-    scale: 1,
-    opacity: 1,
-    duration: 1.4,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: img,
-      start: "top 80%",
-    }
-  });
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
 // 数字アニメーションの関数
@@ -205,4 +192,65 @@ gsap.utils.toArray(".stat-number").forEach(numEl => {
       }
     }
   });
+});
+
+gsap.set(".img-reveal", {
+  scale: 0.9,
+  opacity: 0
+});
+
+gsap.utils.toArray(".img-reveal").forEach(el => {
+  gsap.to(el, {
+    scale: 1,
+    opacity: 1,
+    duration: 1.1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 80%",
+    }
+  });
+});
+
+
+/* =========================
+   Site Loader Animation
+========================= */
+window.addEventListener("load", () => {
+  const loader = document.getElementById("site-loader");
+  const logo   = loader.querySelector(".loader-logo");
+
+  // ScrollTriggerを一旦停止
+  ScrollTrigger.getAll().forEach(st => st.disable());
+
+  const tl = gsap.timeline({
+    defaults: { ease: "power3.out" }
+  });
+
+  tl
+    // ロゴ出現
+    .to(logo, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9
+    })
+
+    // 一拍（重要）
+    .to({}, { duration: 0.6 })
+
+    // ローダーごと上に抜く
+    .to(loader, {
+      yPercent: -100,
+      duration: 1.1,
+      ease: "power2.inOut"
+    })
+
+    // 完全に消す
+    .set(loader, { display: "none" })
+
+    // ScrollTrigger復活
+    .add(() => {
+      ScrollTrigger.getAll().forEach(st => st.enable());
+      ScrollTrigger.refresh();
+    });
 });
