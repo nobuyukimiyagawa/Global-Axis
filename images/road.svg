@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 120 2400">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: #2b2f33;
+      }
+
+      .st1 {
+        isolation: isolate;
+        opacity: .9;
+        stroke: #fff;
+        stroke-dasharray: 24 24;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <path class="st2" d="M120,0v2400H0V0h120Z"/>
+  <path class="st0" d="M60,0h0C90.9,0,116,25.1,116,56v2288c0,30.9-25.1,56-56,56h0c-30.9,0-56-25.1-56-56V56C4,25.1,29.1,0,60,0Z"/>
+  <line class="st1" x1="60" y1="0" x2="60" y2="2400"/>
+  <path id="road-path" class="st0" d="M60,0v2400"/>
+</svg>
