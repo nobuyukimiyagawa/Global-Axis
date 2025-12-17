@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Axis | 食品流通から、未来を変える。</title>
+  <meta name="description" content="“コールドチェーン”を基盤に、食品流通の未来を支える多彩なソリューションを提供。" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <div class="road-bg" aria-hidden="true"></div>
+
+  <div class="truck-wrap">
+    <img src="./images/truck-svgrepo-com.svg" class="truck" alt="">
+    <div class="scroll-hint">Scroll Down</div>
+  </div>
+
+  <main id="top">
+
+  <!-- ★ 全ページ共通 背景レイヤー -->
+  <div class="goo-layer" aria-hidden="true">
+    <!-- ★ 全ページ背景用 Goo（固定） -->
+    <div class="goo" aria-hidden="true">
+      <span class="blob c-red   s-lg a-1"></span>
+      <span class="blob c-blue  s-md a-2"></span>
+      <span class="blob c-green s-lg a-3"></span>
+      <span class="blob c-dark  s-sm a-4"></span>
+
+      <span class="blob c-blue  s-lg a-5"></span>
+      <span class="blob c-green s-md a-6"></span>
+      <span class="blob c-red   s-sm a-7"></span>
+      <span class="blob c-dark  s-md a-8"></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="TOPへ">
+        <img class="brand__logo" src="./images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+      </a>
+
+      <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+        <a href="#service" class="nav-item">
+          <span class="nav-face nav-face--en">Service</span>
+          <span class="nav-face nav-face--ja">サービス</span>
+        </a>
+      
+        <a href="#philosophy" class="nav-item">
+          <span class="nav-face nav-face--en">Philosophy</span>
+          <span class="nav-face nav-face--ja">企業理念</span>
+        </a>
+      
+        <a href="#company" class="nav-item">
+          <span class="nav-face nav-face--en">Company</span>
+          <span class="nav-face nav-face--ja">会社情報</span>
+        </a>
+      
+        <a href="#recruit" class="nav-link">
+          Recruit <span class="ext">↗</span>
+        </a>
+      </nav>
+      
+
+      <a class="btn btn--primary header__cta" href="#contact">Contact</a>
+
+      <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="drawer" aria-hidden="true">
+      <div class="drawer__inner container">
+        <a href="#service">Service</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#company">Company</a>
+        <a href="#recruit">Recruit</a>
+        <a class="btn btn--primary" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+    <!-- KV -->
+    <section class="kv" aria-label="キービジュアル">
+      <div class="container kv__inner">
+        <h1 class="kv__title rm-text"><span>食</span><span>品</span><span>流</span><span>通</span><span>か</span><span>ら</span><span>、</span>
+          <span>未</span><span>来</span><span>を</span><span>変</span><span>え</span><span>る</span><span>。</span></h1>
+        <p class="kv__kicker rm-sub">
+          <span>Changing</span>
+          <span>The</span>
+          <span>Future</span>
+          <span>Through</span>
+          <span>Food</span>
+          <span>Distribution</span></p>
+      </div>
+      <!-- Goo filter -->
+      <svg class="defs" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="metaball">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 28 -10"
+              result="goo"
+            />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+    </section>
+
+    <section id="service" class="section">
+      <div class="section__inner">
+        <div class="container">
+    
+          <div class="section__head">
+            <h2 class="section__title rm-title">サービス</h2>
+            <p class="section__sub rm-title">変化に対応した、柔軟で確かな提案を。</p>
+          </div>
+    
+          <div class="service-layout">
+    
+            <!-- ① 流通 / コンサル（2カラム） -->
+            <div class="service-row two-col">
+    
+              <article class="card card--with-image">
+                <div class="card__image">
+                  <img src="./images/service_01.jpg" alt="流通事業" class="rm-image">
+                </div>
+                <div class="card__body">
+                  <div class="card__no rm-title">01</div>
+                  <h3 class="card__title rm-title">流通事業</h3>
+                  <p class="card__text">
+                    生産者、サプライヤー、小売業者、サービス事業者に向け、青果の仕入れ・販売を中心とした流通サービスを展開。
+                  </p>
+                  <div class="tags">
+                    <span class="tag">卸売り</span>
+                    <span class="tag">リテール</span>
+                    <span class="tag">通販・EC</span>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card card--with-image">
+                <div class="card__image">
+                  <img src="./images/service_02.jpg" alt="コンサルティング事業" class="rm-image">
+                </div>
+                <div class="card__body">
+                  <div class="card__no rm-title">02</div>
+                  <h3 class="card__title rm-title">コンサルティング事業</h3>
+                  <p class="card__text">
+                    SCM高度化、在庫最適化、EC構築など、コールドチェーンを軸に一貫支援します。
+                  </p>
+                  <div class="tags">
+                    <span class="tag">VMI</span>
+                    <span class="tag">SCM</span>
+                    <span class="tag">DX</span>
+                  </div>
+                </div>
+              </article>
+    
+            </div>
+    
+            <!-- ② CCM（1カラム） -->
+            <div class="service-row one-col">
+    
+              <article class="card card--with-image card--wide">
+                <div class="card__image card__image--wide">
+                  <img src="./images/service_03.jpg" alt="CCM事業" class="rm-image">
+                </div>
+                <div class="card__body">
+                  <div class="card__no rm-title">03</div>
+                  <h3 class="card__title rm-title">CCM（コールドチェーンマネジメント）事業</h3>
+                  <p class="card__text">
+                    青果に特化したコールドチェーンプラットフォームを構築し、
+                    輸配送・保管・センター運営まで高品質物流を実現します。
+                  </p>
+                  <div class="tags">
+                    <span class="tag">輸配送</span>
+                    <span class="tag">保管</span>
+                    <span class="tag">センターオペレーション</span>
+                  </div>
+                </div>
+              </article>
+    
+            </div>
+    
+            <!-- ③ CCM サービスマップ -->
+            <div class="service-row one-col">
+              <section class="map-holder">
+                <div class="map-holder__head">
+                  <h3 class="map-holder__title rm-title">CCM事業サービスマップ</h3>
+                </div>
+                <img src="./images/ccmmap.png" alt="CCM事業サービスマップ" style="width:100%;height:auto;" class="rm-image">
+              </section>
+            </div>
+    
+            <!-- ④ ファイナンス / DX（2カラム） -->
+            <div class="service-row two-col">
+    
+              <article class="card card--with-image">
+                <div class="card__image">
+                  <img src="./images/service_04.jpg" alt="ファイナンス事業" class="rm-image">
+                </div>
+                <div class="card__body">
+                  <div class="card__no rm-title">04</div>
+                  <h3 class="card__title rm-title">ファイナンス事業</h3>
+                  <p class="card__text">
+                    在庫リスク軽減と資金繰りの最適化を通じて、
+                    中小運送会社の競争力を支援します。
+                  </p>
+                </div>
+              </article>
+    
+              <article class="card card--with-image">
+                <div class="card__image">
+                  <img src="./images/service_05.jpg" alt="DXソリューション事業" class="rm-image">
+                </div>
+                <div class="card__body">
+                  <div class="card__no rm-title">05</div>
+                  <h3 class="card__title rm-title">DXソリューション事業</h3>
+                  <p class="card__text">
+                    AIと青果流通ノウハウを融合し、
+                    業務改善からシステム開発まで支援します。
+                  </p>
+                </div>
+              </article>
+    
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="section">
+      <div class="container">
+    
+        <div class="section__head">
+          <h2 class="section__title rm-title">数字で見る Global Axis</h2>
+        </div>
+    
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="1284">0</div>
+            <p class="stat-label">取り扱い件数</p>
+          </div>
+    
+          <div class="stat-card">
+            <div class="stat-number" data-target="367">0</div>
+            <p class="stat-label">物流パートナー</p>
+          </div>
+    
+          <div class="stat-card">
+            <div class="stat-number" data-target="59">0</div>
+            <p class="stat-label">全国ネットワーク</p>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+    
+
+    <!-- Philosophy -->
+    <section id="philosophy" class="section">
+      <div class="section__inner">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title rm-title">企業理念</h2>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">食品流通の未来を変革し、人と社会に持続可能な価値を届ける。</h3>
+            <p class="panel__text">
+              私たちは、青果を中心とした食品を通じて、健康、経済、環境、すべての面で豊かさを育む循環を創ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability -->
+    <section class="section">
+      <div class="section__inner">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title rm-title">SDGsに向けた取り組み</h2>
+          </div>
+
+          <div class="grid2">
+            <div class="listbox">
+              <h3>カーボンニュートラルの実現に向けた取り組み</h3>
+              <ul>
+                <li>運送効率化による二酸化炭素ガス排出削減</li>
+                <li>太陽光発電パネルの設置</li>
+                <li>EV車の活用</li>
+                <li>モーダルシフトの推進</li>
+              </ul>
+            </div>
+
+            <div class="listbox">
+              <h3>平等な雇用の実現に向けた取り組み</h3>
+              <ul>
+                <li>短時間労働が可能な高齢ドライバーの雇用</li>
+                <li>外国人技能実習生の同一労働同一賃金</li>
+              </ul>
+
+              <h3 class="mt24">持続可能な事業の推進</h3>
+              <ul>
+                <li>物流や食品業界の最適化を目指した継続的な改善と革新</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company -->
+    <section id="company" class="section">
+      <div class="section__inner">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title rm-title">会社情報</h2>
+          </div>
+          <div class="table">
+            <div class="row"><div class="th">会社名</div><div class="td">株式会社グローバル・アクシス</div></div>
+            <div class="row"><div class="th">代表取締役</div><div class="td">朝比奈哲平</div></div>
+            <div class="row"><div class="th">所在地</div><div class="td">東京都港区南麻布2-14-13 麻布山口ビル2階</div></div>
+            <div class="row"><div class="th">設立日</div><div class="td">2025年7月14日</div></div>
+            <div class="row"><div class="th">資本金</div><div class="td">900万円（2025年7月現在）</div></div>
+            <div class="row">
+              <div class="th">事業内容</div>
+              <div class="td">
+                <ul class="inline-list">
+                  <li>青果の仕入・販売</li>
+                  <li>青果の通販サイトの運営</li>
+                  <li>コールドチェーンに特化したロジスティクスコンサルティング業務</li>
+                  <li>チルドセンターに特化したアセットバリューアップコンサルティング業務</li>
+                  <li>輸配送業務 / センターオペレーション業務 / 流通加工業務</li>
+                  <li>冷蔵・チルド保管業務</li>
+                  <li>燃料販売 / 車両リース業務</li>
+                  <li>ソフトウェアの開発 / 販売及び保守</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruit -->
+    <section id="recruit" class="section">
+      <div class="section__inner">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title rm-title">採用情報</h2>
+          </div>
+
+          <div class="panel">
+            <p class="panel__text">
+              Global Axisでは新規事業のほか、食品流通の新しい未来を推進する仲間を募集しています。
+              採用に関するお問い合わせは、下記のメールアドレスまたはお電話番号までご連絡ください。
+            </p>
+            <div class="contactline">
+              <a href="mailto:info@globalaxis.jp">info@globalaxis.jp</a>
+              <span class="dot">•</span>
+              <a href="tel:0368115909">03-6811-5909</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--cta">
+      <div class="section__inner">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2 class="cta__title rm-title">お問い合わせ</h2>
+              <p class="cta__text">
+                当社へのお問い合わせにつきましては、お電話・メール、問い合わせフォームにて承っております。
+              </p>
+              <p class="cta__meta">
+                TEL 03-6811-5909 / FAX 03-6811-5908<br/>
+                〒106-0047 東京都港区南麻布2-14-13 麻布山口ビル2階
+              </p>
+            </div>
+
+            <div class="cta__actions">
+              <a class="btn btn--primary" href="mailto:info@globalaxis.jp">メールで問い合わせ</a>
+              <a class="btn btn--ghost" href="tel:0368115909">電話する</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <small>© Global Axis inc.</small>
+      <a href="https://globalaxis.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+    </div>
+  </footer>
+
+</body>
+</html>
