@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>企業理念 | Global Axis</title>
+    <meta name="description" content="Global Axisの企業理念。" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <link rel="stylesheet" href="../css/dropdown.css" />
+    <link rel="stylesheet" href="../css/philosophy.css" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/cursor.js"></script>
+</head>
+
+<body>
+    <div class="road-bg" aria-hidden="true"></div>
+
+    <div class="truck-wrap">
+        <img src="../images/truck-svgrepo-com.svg" class="truck" alt="">
+        <div class="scroll-hint">Scroll Down</div>
+    </div>
+
+    <main id="company-philosophy">
+        <div id="site-loader" aria-hidden="true">
+            <div class="loader-inner">
+                <img src="../images/logo_globalaxis.svg" alt="Global Axis" class="loader-logo">
+            </div>
+        </div>
+
+        <div class="goo-layer" aria-hidden="true">
+            <div class="goo" aria-hidden="true">
+                <span class="blob c-red   s-lg a-1"></span>
+                <span class="blob c-blue  s-md a-2"></span>
+                <span class="blob c-green s-lg a-3"></span>
+                <span class="blob c-dark  s-sm a-4"></span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container header__inner">
+                <a class="brand" href="../index.html" aria-label="TOPへ">
+                    <img class="brand__logo" src="../images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+                </a>
+
+                                <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+                    <!-- Service Dropdown -->
+                    <div class="nav-item">
+                        <a href="../business.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Service</span>
+                            <span class="nav-face nav-face--ja">サービス</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../business/logistics.html">流通事業</a>
+                            <a href="../business/cold-chain-management.html">CCM事業</a>
+                            <a href="../business/consulting.html">コンサルティング</a>
+                            <a href="../business/finance.html">ファイナンス</a>
+                            <a href="../business/dx-solutions.html">DXソリューション</a>
+                        </div>
+                    </div>
+
+                    <!-- Company Dropdown -->
+                    <div class="nav-item">
+                        <a href="../company.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Company</span>
+                            <span class="nav-face nav-face--ja">会社情報</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../company/overview.html">会社概要</a>
+                            <a href="../company/philosophy.html">企業理念</a>
+                            <a href="../company/structure.html">組織図</a>
+                        </div>
+                    </div>
+
+                    <!-- News -->
+                    <a href="../news.html" class="nav-item">
+                        <span class="nav-face nav-face--en">News</span>
+                        <span class="nav-face nav-face--ja">お知らせ</span>
+                    </a>
+
+                    <a href="../recruit.html" class="nav-link">
+                        Recruit <span class="ext">↗</span>
+                    </a>
+                </nav>
+
+                <a class="btn btn--primary header__cta" href="../contact.html">Contact</a>
+                <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="drawer" aria-hidden="true">
+                                <div class="drawer__inner container">
+                    <a href="../business.html">Service</a>
+                    <a href="../company.html">Company</a>
+                    <a href="../news.html">News</a>
+                    <a href="../recruit.html">Recruit</a>
+                    <a class="btn btn--primary" href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="kv" style="min-height: 50vh;">
+            <div class="container kv__inner">
+                <h1 class="kv__title rm-text">
+                    <span>P</span><span>h</span><span>i</span><span>l</span><span>o</span><span>s</span><span>o</span><span>p</span><span>h</span><span>y</span>
+                </h1>
+                <p class="kv__kicker rm-sub"><span>企業理念</span></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__inner">
+                <div class="container">
+                    <div class="panel" style="text-align: center; max-width: 900px; margin: 0 auto;">
+                        <h3 class="panel__title" style="font-size: 24px;">食品流通の未来を変革し、人と社会に持続可能な価値を届ける。</h3>
+                        <p class="panel__text" style="font-size: 16px;">
+                            私たちは、青果を中心とした食品を通じて、健康、経済、環境、すべての面で豊かさを育む循環を創ります。
+                        </p>
+                    </div>
+
+                    <div class="philosophy-grid">
+                        <!-- Supplier -->
+                        <div class="phy-card phy-card--supplier">
+                            <h3 class="phy-card__title" style="color: #ff6347;">サプライヤーへの貢献</h3>
+                            <p class="phy-card__text">
+                                効率的な物流ネットワークを活用することで、サプライヤーへの継続的な物流コスト削減を提案します。
+                                取引先である小売業者との関係を強化し、新規開拓の支援、販売機会の最大化を図ります。
+                            </p>
+                        </div>
+
+                        <!-- Consumer -->
+                        <div class="phy-card phy-card--consumer">
+                            <h3 class="phy-card__title" style="color: #4682b4;">消費者への貢献</h3>
+                            <p class="phy-card__text">
+                                消費者の食卓に新鮮で安全な青果を届けます。
+                                最適な輸送管理、温度管理を活用し、新鮮で高品質な青果を提供します。
+                            </p>
+                        </div>
+
+                        <!-- Society -->
+                        <div class="phy-card phy-card--society">
+                            <h3 class="phy-card__title" style="color: #708090;">社会への貢献</h3>
+                            <p class="phy-card__text">
+                                青果業界における物流の効率化を推進し、トラック台数の削減やルート最適化を通じて、CO2排出量の削減を目指します。
+                                適正なフローに見直すことで無駄な廃棄を削減し、フードロスを軽減します。
+                            </p>
+                        </div>
+
+                        <!-- Producer -->
+                        <div class="phy-card phy-card--producer">
+                            <h3 class="phy-card__title" style="color: #9acd32;">生産者への貢献</h3>
+                            <p class="phy-card__text">
+                                青果流通における生産者の負担を軽減するため、効率的で透明性の高い物流ネットワークを構築します。
+                                生産者が適正な収益を得られる仕組みを提供し、地域経済の活性化にも貢献します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <h2 class="mission-title">私たちの使命</h2>
+                <p class="mission-lead">青果物流業界の変革</p>
+
+                <div class="mission-list">
+                    <div class="mission-item">
+                        <div class="mission-icon">🎯</div>
+                        <div>
+                            <h3 style="font-size: 18px; margin-bottom: 8px; font-weight:800;">チルド輸送の普及 〜ドライ輸送の常態化〜</h3>
+                            <p style="font-size: 14px; line-height: 1.6;">
+                                野菜や果物を常温で運ぶ現状を変革します。「夏の暑い日にトラックの中で長時間常温で放置」「地方から長時間かけて運ぶ」といった品質リスクを、コールドチェーンの徹底により解消します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mission-item">
+                        <div class="mission-icon">🎯</div>
+                        <div>
+                            <h3 style="font-size: 18px; margin-bottom: 8px; font-weight:800;">健全な業界運営 〜コンプライアンス軽視〜</h3>
+                            <p style="font-size: 14px; line-height: 1.6;">
+                                「白ナンバーでの運送」「駐車場での荷捌き」「営業倉庫の無許可運営」といった不透明な慣習を撤廃し、法令を遵守した健全な物流インフラを構築します。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mission-item">
+                        <div class="mission-icon">🎯</div>
+                        <div>
+                            <h3 style="font-size: 18px; margin-bottom: 8px; font-weight:800;">物価高と物流コスト対策 〜適正価格の実現〜</h3>
+                            <p style="font-size: 14px; line-height: 1.6;">
+                                燃料費や人件費の高騰、ドライバーの高齢化と人材不足に対応するため、物流の効率化を徹底し、顧客への転嫁を最小限に抑えつつ持続可能なコスト構造を実現します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability moved here too, usually? Or maybe on a separated page? 
+         Currently "SDGsに向けた取り組み" is in index.html below Philosophy. 
+         I will put it here as usually Philosophy and initiatives go together. -->
+        <section class="section">
+            <div class="section__inner">
+                <div class="container">
+                    <div class="section__head">
+                        <h2 class="section__title rm-title">SDGsに向けた取り組み</h2>
+                    </div>
+
+                    <div class="grid2">
+                        <div class="listbox">
+                            <h3>カーボンニュートラルの実現に向けた取り組み</h3>
+                            <ul>
+                                <li>運送効率化による二酸化炭素ガス排出削減</li>
+                                <li>太陽光発電パネルの設置</li>
+                                <li>EV車の活用</li>
+                                <li>モーダルシフトの推進</li>
+                            </ul>
+                        </div>
+
+                        <div class="listbox">
+                            <h3>平等な雇用の実現に向けた取り組み</h3>
+                            <ul>
+                                <li>短時間労働が可能な高齢ドライバーの雇用</li>
+                                <li>外国人技能実習生の同一労働同一賃金</li>
+                            </ul>
+
+                            <h3 class="mt24">持続可能な事業の推進</h3>
+                            <ul>
+                                <li>物流や食品業界の最適化を目指した継続的な改善と革新</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <small>© Global Axis inc.</small>
+            <a href="https://globalaxis.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+    <div id="cursor-drone" class="cursor-drone"></div>
+</body>
+
+</html>
