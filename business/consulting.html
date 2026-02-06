@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コンサルティング事業 | Global Axis</title>
+    <meta name="description" content="Global Axisのコンサルティング事業について。" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <link rel="stylesheet" href="../css/dropdown.css" />
+    <link rel="stylesheet" href="../css/business-custom.css" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/cursor.js"></script>
+</head>
+
+<body>
+    <div class="road-bg" aria-hidden="true"></div>
+
+    <div class="truck-wrap">
+        <img src="../images/truck-svgrepo-com.svg" class="truck" alt="">
+        <div class="scroll-hint">Scroll Down</div>
+    </div>
+
+    <main id="business-consulting">
+        <div id="site-loader" aria-hidden="true">
+            <div class="loader-inner">
+                <img src="../images/logo_globalaxis.svg" alt="Global Axis" class="loader-logo">
+            </div>
+        </div>
+
+        <div class="goo-layer" aria-hidden="true">
+            <div class="goo" aria-hidden="true">
+                <span class="blob c-blue  s-lg a-5"></span>
+                <span class="blob c-green s-md a-6"></span>
+                <span class="blob c-red   s-sm a-7"></span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container header__inner">
+                <a class="brand" href="../index.html" aria-label="TOPへ">
+                    <img class="brand__logo" src="../images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+                </a>
+
+                                <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+                    <!-- Service Dropdown -->
+                    <div class="nav-item">
+                        <a href="../business.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Service</span>
+                            <span class="nav-face nav-face--ja">サービス</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../business/logistics.html">流通事業</a>
+                            <a href="../business/cold-chain-management.html">CCM事業</a>
+                            <a href="../business/consulting.html">コンサルティング</a>
+                            <a href="../business/finance.html">ファイナンス</a>
+                            <a href="../business/dx-solutions.html">DXソリューション</a>
+                        </div>
+                    </div>
+
+                    <!-- Company Dropdown -->
+                    <div class="nav-item">
+                        <a href="../company.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Company</span>
+                            <span class="nav-face nav-face--ja">会社情報</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../company/overview.html">会社概要</a>
+                            <a href="../company/philosophy.html">企業理念</a>
+                            <a href="../company/structure.html">組織図</a>
+                        </div>
+                    </div>
+
+                    <!-- News -->
+                    <a href="../news.html" class="nav-item">
+                        <span class="nav-face nav-face--en">News</span>
+                        <span class="nav-face nav-face--ja">お知らせ</span>
+                    </a>
+
+                    <a href="../recruit.html" class="nav-link">
+                        Recruit <span class="ext">↗</span>
+                    </a>
+                </nav>
+
+                <a class="btn btn--primary header__cta" href="../contact.html">Contact</a>
+                <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="drawer" aria-hidden="true">
+                                <div class="drawer__inner container">
+                    <a href="../business.html">Service</a>
+                    <a href="../company.html">Company</a>
+                    <a href="../news.html">News</a>
+                    <a href="../recruit.html">Recruit</a>
+                    <a class="btn btn--primary" href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="kv" style="min-height: 50vh;">
+            <div class="container kv__inner">
+                <h1 class="kv__title rm-text">
+                    <span>C</span><span>o</span><span>n</span><span>s</span><span>u</span><span>l</span><span>t</span><span>i</span><span>n</span><span>g</span>
+                </h1>
+                <p class="kv__kicker rm-sub"><span>コンサルティング事業</span></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section__inner">
+                <div class="container">
+                    <div class="panel">
+                        <h3 class="panel__title">SCM高度化、在庫最適化、EC構築など、コールドチェーンを軸に一貫支援します。</h3>
+                        <p class="panel__text">
+                            （ここに詳細な説明文が入ります。）
+                        </p>
+                        <div class="tags" style="margin-top: 24px;">
+                            <span class="tag">VMI</span>
+                            <span class="tag">SCM</span>
+                            <span class="tag">DX</span>
+                        </div>
+
+                        <div style="margin-top: 50px;">
+                            <h3 class="section__title rm-title" style="font-size:24px; margin-bottom:30px;">
+                                事例紹介：アセットバリューアップ</h3>
+
+                            <!-- Case 1: Okinawa -->
+                            <div class="case-card">
+                                <div class="case-img">
+                                    <!-- Ideally we use the updated images, using placeholder for now but structure is ready -->
+                                    <img src="../images/service_02.jpg" alt="沖縄：大型常温物流施設">
+                                </div>
+                                <div class="case-body">
+                                    <span class="case-tag">施工事例 - 沖縄</span>
+                                    <h4 class="case-title">大型常温物流施設のリノベーション</h4>
+                                    <p class="case-text">
+                                        常温倉庫としての供給過多により空室が目立っていた大型施設を、需要が逼迫している「冷蔵・チルド倉庫」へ改修。エリア最大級のコールドチェーン拠点として再生しました。
+                                    </p>
+                                    <ul class="case-points">
+                                        <li>現地調査から設備決定まで一貫対応</li>
+                                        <li>チルド倉庫への改修工事</li>
+                                        <li>テナント誘致の優位性向上</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Case 2: Chiba -->
+                            <div class="case-card">
+                                <div class="case-img">
+                                    <img src="../images/service_03.jpg" alt="千葉：大型常温物流施設">
+                                </div>
+                                <div class="case-body">
+                                    <span class="case-tag">施工事例 - 千葉</span>
+                                    <h4 class="case-title">冷蔵設備導入による資産価値向上</h4>
+                                    <p class="case-text">
+                                        周辺地域の開発による競合増に対し、独自性を持たせるために冷蔵設備を導入。加工場や解体工事も含めた大規模なバリューアップを実現しました。
+                                    </p>
+                                    <ul class="case-points">
+                                        <li>解体工事・造成工事</li>
+                                        <li>冷蔵設備設置工事</li>
+                                        <li>加工場建設工事</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <small>© Global Axis inc.</small>
+            <a href="https://globalaxis.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+    <div id="cursor-drone" class="cursor-drone"></div>
+</body>
+
+</html>
