@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad_chart" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43B8E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#79D44A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="28" fill="#f0f4f8" stroke="#e0e6ed" stroke-width="2"/>
+  <!-- Chart -->
+  <path d="M16 44 L26 34 L36 40 L50 20" fill="none" stroke="url(#grad_chart)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="26" cy="34" r="3" fill="#43B8E5"/>
+  <circle cx="36" cy="40" r="3" fill="#43B8E5"/>
+  <circle cx="50" cy="20" r="4" fill="#79D44A"/>
+  <!-- Magnifying glass -->
+  <circle cx="48" cy="48" r="10" fill="none" stroke="#1E2A2F" stroke-width="3"/>
+  <line x1="40" y1="56" x2="34" y2="62" stroke="#1E2A2F" stroke-width="3" stroke-linecap="round"/>
+</svg>

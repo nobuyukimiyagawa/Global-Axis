@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad_gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C34B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4A017;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Stack 1 -->
+  <ellipse cx="16" cy="48" rx="14" ry="6" fill="#D4A017"/>
+  <path d="M2 48 V38 A14 6 0 0 1 30 38 V48" fill="url(#grad_gold)"/>
+  <ellipse cx="16" cy="38" rx="14" ry="6" fill="#E8C34B"/>
+  
+  <!-- Stack 2 -->
+  <ellipse cx="32" cy="40" rx="14" ry="6" fill="#D4A017"/>
+  <path d="M18 40 V30 A14 6 0 0 1 46 30 V40" fill="url(#grad_gold)"/>
+  <ellipse cx="32" cy="30" rx="14" ry="6" fill="#E8C34B"/>
+
+  <!-- Stack 3 -->
+  <ellipse cx="48" cy="32" rx="14" ry="6" fill="#D4A017"/>
+  <path d="M34 32 V22 A14 6 0 0 1 62 22 V32" fill="url(#grad_gold)"/>
+  <ellipse cx="48" cy="22" rx="14" ry="6" fill="#E8C34B"/>
+  
+  <!-- Arrow -->
+  <path d="M40 50 L56 6 L60 12" fill="none" stroke="#1E2A2F" stroke-width="3" stroke-linecap="round"/>
+</svg>
