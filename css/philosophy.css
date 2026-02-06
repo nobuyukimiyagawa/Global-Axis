@@ -1,0 +1,105 @@
+/* Philosophy Page Styles */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.phy-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--blue);
+    transition: transform 0.3s ease;
+}
+
+.phy-card:hover {
+    transform: translateY(-5px);
+}
+
+.phy-card--consumer {
+    border-color: #66cdaa;
+    /* Greenish/Blue */
+}
+
+.phy-card--producer {
+    border-color: #9acd32;
+    /* Green */
+}
+
+.phy-card--society {
+    border-color: #708090;
+    /* Gray/Blue */
+}
+
+.phy-card--supplier {
+    border-color: #ff6347;
+    /* Red/Orange */
+}
+
+.phy-card__title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phy-card__text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.mission-section {
+    background: #f0f8ff;
+    padding: 60px 0;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.mission-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--blue);
+    margin-bottom: 24px;
+}
+
+.mission-lead {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.mission-list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mission-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.mission-icon {
+    font-size: 24px;
+    color: var(--blue);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,195 @@
+/* Organization Chart Styles */
+.org-chart {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.org-tree,
+.org-tree ul,
+.org-tree li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.org-tree {
+    text-align: center;
+}
+
+.org-tree li {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 120px;
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Connectors */
+.org-tree li::before,
+.org-tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 2px solid #ccc;
+    width: 50%;
+    height: 20px;
+}
+
+.org-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 2px solid #ccc;
+}
+
+.org-tree li:only-child::after,
+.org-tree li:only-child::before {
+    display: none;
+}
+
+.org-tree li:only-child {
+    padding-top: 0;
+}
+
+.org-tree li:first-child::before,
+.org-tree li:last-child::after {
+    border: 0 none;
+}
+
+.org-tree li:last-child::before {
+    border-right: 2px solid #ccc;
+    border-radius: 0 5px 0 0;
+}
+
+.org-tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+}
+
+.org-tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 2px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+
+/* Boxes */
+.org-box {
+    background: #fff;
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    min-width: 140px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 2;
+    margin: 0 10px 20px;
+}
+
+.org-box:hover {
+    background: var(--blue);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.org-box--gray {
+    background: #f4f4f4;
+    border-color: #999;
+    color: #555;
+}
+
+.org-box--green {
+    background: #eaffea;
+    border-color: var(--green);
+    color: var(--green-dark);
+}
+
+/* Specific Level Styling */
+.org-level-1 {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/* Shareholder */
+.org-level-2 {
+    font-size: 15px;
+}
+
+/* Board */
+.org-level-3 {
+    font-size: 14px;
+}
+
+/* Divisions */
+.org-level-4 {
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0 auto;
+    padding: 15px 8px;
+    min-height: 120px;
+    min-width: 40px;
+}
+
+/* Divisions row colors */
+.div-admin {
+    background-color: #e8f5e9;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.div-ops {
+    background-color: #e3f2fd;
+    border-color: #2196f3;
+    color: #1565c0;
+}
+
+.div-sales {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #ef6c00;
+}
+
+.dept-admin {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+}
+
+.dept-ops {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+}
+
+.dept-sales {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .org-tree li {
+        padding-top: 10px;
+    }
+
+    .org-box {
+        margin: 0 4px 15px;
+        padding: 8px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+}

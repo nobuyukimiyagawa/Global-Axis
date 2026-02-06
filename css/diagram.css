@@ -1,0 +1,771 @@
+/* Diagram Section V7 - React Design Port */
+#business-flow {
+    padding: 30px 0;
+    /* Reduced padding */
+    background: #f8fafc;
+    /* bg-slate-50 */
+    font-family: "Noto Sans JP", sans-serif;
+    color: #1e293b;
+    /* slate-800 */
+}
+
+/* UTILITIES & ANIMATIONS */
+@keyframes truckMoveRight {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes pulseActive {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+        filter: brightness(1.05);
+        box-shadow: 0 0 20px rgba(0, 149, 217, 0.3);
+    }
+}
+
+@keyframes lineFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+@keyframes lineFlowReverse {
+    0% {
+        background-position: 200% 0%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.d-animate-truck {
+    position: absolute;
+    animation: truckMoveRight 2.5s linear infinite;
+    color: #334155;
+    /* slate-700 */
+}
+
+.d-line-container.d-flow-line {
+    background: linear-gradient(90deg, #f1f5f9 25%, #0095d9 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+}
+
+.d-line-container.d-active-line {
+    animation: lineFlowReverse 1.5s linear infinite;
+}
+
+.d-active-pulse {
+    animation: pulseActive 2s infinite;
+}
+
+.d-spin {
+    animation: spinSlow 3s linear infinite;
+}
+
+/* LAYOUT CONTAINER */
+.d-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    /* shadow-2xl */
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    /* slate-200 */
+}
+
+/* HEADER */
+.d-header {
+    background: #0095d9;
+    color: #fff;
+    padding: 20px 32px;
+    border-radius: 12px;
+    margin: 10px 20% 20px 9%;
+    /* Asymmetric margins to align with Lines (Skip icons/dests) */
+    width: auto;
+    /* Allow margins to define width */
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.d-header h2 {
+    font-size: 20px;
+    /* Reduced from 36px */
+    font-weight: 900;
+    letter-spacing: 0.3em;
+    margin: 0;
+}
+
+.d-header p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 8px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* GRID SYSTEM */
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    /* min-height removed to fit content */
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* --- LEFT COL (3 cols) --- */
+.d-col-left {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically center */
+    /* justify-content: flex-start; removed */
+    gap: 40px;
+    /* Space between Import and Domestic */
+    padding-right: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* Offset bottom buttons to match Center Box height center */
+    /* border-right: 2px dashed #f1f5f9; Removed per user request */
+}
+
+.d-input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.d-input-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.d-input-icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.d-icon-frame {
+    border: 2px solid;
+    padding: 16px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 12px;
+    border-radius: 9999px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.d-input-text {
+    font-size: 13px;
+    /* Adjusted size */
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Lines */
+.d-line-container {
+    flex: 1;
+    height: 6px;
+    border-radius: 9999px;
+    position: relative;
+    background: #f1f5f9;
+}
+
+/* Shared Label Styles */
+.d-line-label,
+.d-deliv-label {
+    position: absolute;
+    top: -65px;
+    left: -10px;
+    /* For line-label */
+    background: #fff;
+    color: #0095d9;
+    border: 2px solid #0095d9;
+    /* Inactive state */
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    white-space: nowrap;
+    font-weight: 700;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s;
+}
+
+/* Specific position adjustments if needed, though they seem similar */
+.d-deliv-label {
+    left: 16px;
+    /* Remove opacity/transform hidden logic */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.d-label-active {
+    background: #0095d9;
+    color: #fff;
+    border-color: #0095d9;
+    animation: pulseActive 2s infinite;
+}
+
+/* --- CENTER COL (5 cols) --- */
+.d-col-center {
+    grid-column: span 5;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.d-center-box {
+    border: 4px solid #0095d9;
+    border-radius: 2.5rem;
+    padding: 40px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.d-bg-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    color: #dbeafe;
+    /* blue-100 */
+    opacity: 0.3;
+    width: 200px;
+    height: 200px;
+    pointer-events: none;
+}
+
+.d-center-title {
+    color: #0095d9;
+    font-weight: 900;
+    font-size: 28px;
+    /* Adjusted */
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    z-index: 10;
+}
+
+.d-center-btn-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    z-index: 10;
+}
+
+.d-c-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    font-weight: 900;
+    transition: all 0.5s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+    cursor: default;
+}
+
+/* Active/Inactive styles handled by JS classes */
+.d-c-btn.active {
+    background: #0095d9;
+    color: #fff;
+    border-color: #93c5fd;
+    transform: scale(1.05);
+}
+
+.d-c-btn.inactive {
+    background: #fff;
+    color: #0095d9;
+    border-color: #0095d9;
+}
+
+.d-c-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.d-c-grid .d-c-btn {
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    height: 100%;
+}
+
+/* Center Bottom Buttons */
+.d-col-center-bot {
+    display: flex;
+    gap: 24px;
+    margin-top: 48px;
+    width: 100%;
+    padding: 0 8px;
+}
+
+.d-bot-btn {
+    flex: 1;
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.d-bot-btn:hover {
+    transform: scale(1.05);
+}
+
+.bg-finance {
+    background: #f2cf01;
+}
+
+.bg-dist {
+    background: #e9952d;
+}
+
+/* --- RIGHT COL (4 cols) --- */
+.d-col-right {
+    grid-column: span 4;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* Explicit top align */
+    padding: 0 0 0 0;
+    /* Align top, keep bottom offset */
+}
+
+.d-right-inner {
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+/* Lines Col */
+.d-right-lines {
+    flex: 1;
+    /* Expand to fill space */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    padding: 32px 8px;
+}
+
+.d-vert-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #f1f5f9;
+    border-radius: 9999px;
+}
+
+.d-delivery-route {
+    width: 100%;
+    height: 6px;
+    position: relative;
+}
+
+
+
+/* Extended lines for stepped layout */
+#line-out-2 {
+    width: 135%;
+    /* Reach 2nd column */
+    max-width: none;
+    /* Override default if any */
+    z-index: 1;
+    /* Ensure visible */
+}
+
+#line-out-3 {
+    width: 170%;
+    /* Reach 3rd column */
+    max-width: none;
+    z-index: 1;
+}
+
+/* Destinations Col */
+.d-right-dests {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    /* Tight gap */
+    padding: 8px 0 8px 12px;
+}
+
+/* Diagonal Placement */
+.d-right-dests .d-dest-box:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    /* align-self: center; Keep default stretch or center? 
+       User didn't specify for box 1, but if others stretch, 
+       this one might look better stretching or center. 
+       Let's keep center for box 1 as it only connects to top line.
+       Wait, if others start at top, maybe this one should too?
+       "Expand to the very top (Mass Retailer Center)" implies alignment.
+       If box 1 is centered in row 1, and box 2 starts at row 1...
+       Let's assume box 1 stays as is (row 1), but box 2 and 3 stretch.
+    */
+    align-self: stretch;
+    /* Let's stretch all for uniformity if top alignment is desired */
+}
+
+.d-right-dests .d-dest-box:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    /* Span rows 1 to 2 */
+}
+
+.d-right-dests .d-dest-box:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    /* Span rows 1 to 3 */
+}
+
+.d-dest-box {
+    background: #fff;
+    border: 2px solid #1e293b;
+    padding: 12px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 14px;
+    /* Adjusted */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: default;
+    max-width: 60px;
+    /* Narrower width */
+    width: 100%;
+}
+
+.d-dest-box:hover {
+    border-color: #3b82f6;
+    color: #2563eb;
+}
+
+.h-short {
+    min-height: 85px;
+}
+
+.h-tall {
+    min-height: 160px;
+}
+
+
+/* FOOTER */
+.d-footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #94a3b8;
+    gap: 24px;
+}
+
+.d-sys-status {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f8fafc;
+    padding: 12px 24px;
+    border-radius: 9999px;
+}
+
+.d-sys-text {
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #64748b;
+}
+
+/* SVG ICONS */
+.d-svg-icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* --- CATCHPHRASE SECTION (Flow Message) --- */
+.flow-message {
+    background-color: transparent;
+    /* Removed dark bg */
+    padding: 40px 20px;
+    /* Reduced padding from 96px */
+    text-align: center;
+    color: #1e293b;
+    /* slate-800 */
+    font-family: "Noto Sans JP", sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.flow-message-inner {
+    max-width: 896px;
+    /* max-w-4xl */
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Badge */
+.fm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background: #eff6ff;
+    /* blue-50 */
+    border: 1px solid #bfdbfe;
+    /* blue-200 */
+    color: #3b82f6;
+    /* blue-500 */
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    /* Reduced margin */
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+.fm-badge-icon {
+    position: relative;
+    display: flex;
+    width: 12px;
+    height: 12px;
+}
+
+.fm-ping {
+    position: absolute;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    /* blue-500 */
+    opacity: 0.75;
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Title */
+.fm-title {
+    font-size: 2.5rem;
+    /* Reduced from 3rem */
+    font-weight: 900;
+    color: #1e293b;
+    /* slate-800 */
+    margin-bottom: 24px;
+    /* Reduced margin */
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+}
+
+@media (min-width: 768px) {
+    .fm-title {
+        font-size: 3.5rem;
+        /* Reduced from 4.5rem/7xl */
+    }
+}
+
+.fm-title-gradient {
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    /* Darker blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Lead Text */
+.fm-lead-box {
+    position: relative;
+    display: inline-block;
+}
+
+.fm-quote {
+    position: absolute;
+    font-family: serif;
+    font-size: 3rem;
+    /* Reduced */
+    color: #cbd5e1;
+    /* slate-300 */
+    line-height: 1;
+    user-select: none;
+}
+
+.fm-quote.top-left {
+    top: -12px;
+    left: -12px;
+}
+
+.fm-quote.bottom-right {
+    bottom: -32px;
+    right: -12px;
+    transform: rotate(180deg);
+}
+
+.fm-text {
+    color: #64748b;
+    /* slate-500 */
+    font-size: 1rem;
+    /* Reduced from 1.125rem */
+    line-height: 1.75;
+    font-weight: 500;
+    max-width: 42rem;
+    /* 2xl */
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .fm-text {
+        font-size: 1.125rem;
+        /* Reduced from 1.25rem */
+    }
+}
+
+/* Decoration */
+.fm-deco {
+    margin-top: 40px;
+    /* Reduced from 64px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.fm-line {
+    height: 1px;
+    width: 48px;
+    background: linear-gradient(to right, transparent, #3b82f6);
+}
+
+.fm-line.reverse {
+    background: linear-gradient(to left, transparent, #3b82f6);
+}
+
+.fm-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ping {
+
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

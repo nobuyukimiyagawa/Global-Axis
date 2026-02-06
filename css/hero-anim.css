@@ -1,0 +1,156 @@
+/* Hero Animation Styles */
+.hero-anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ha-svg {
+    width: 100%;
+    height: 100%;
+    /* max-width: 1200px; Optional constraint */
+}
+
+/* Base element styles */
+.ha-element {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+    /* Default origin for growth */
+}
+
+.sun-core {
+    fill: var(--red, #E84B5C);
+    transform-origin: center center;
+    transform-box: fill-box;
+    /* Key for correct rotation origin */
+}
+
+.sun-ray {
+    fill: var(--red, #E84B5C);
+    /* No transform-origin needed for rays orbiting the group */
+}
+
+.rain-drop {
+    fill: var(--blue, #43B8E5);
+    opacity: 0.7;
+}
+
+.sprout {
+    fill: var(--green, #79D44A);
+    /* stroke: var(--green, #79D44A);
+    stroke-width: 2px; */
+}
+
+.soil {
+    fill: #8D6E63;
+    /* Earthy Brown */
+    transform-origin: center top;
+}
+
+.tree-trunk {
+    fill: #5D4037;
+    /* Darker Brown for trunk */
+    /* fill: var(--green, #79D44A); User requested specific brown, not green anymore */
+}
+
+.tree-foliage {
+    fill: var(--green, #79D44A);
+}
+
+.apple {
+    fill: var(--red, #E84B5C);
+    transform-origin: center center;
+    /* Changed from center top for simpler scaling */
+    transform-box: fill-box;
+    /* Key for correct scaling origin */
+}
+
+/* Opacity states primarily handled by GSAP, but set defaults if needed */
+#ha-sun,
+#ha-rain-group,
+#ha-tree-group {
+    opacity: 0;
+}
+
+#ha-sprout {
+    opacity: 1;
+    /* Starts visible? Or grows in? */
+}
+
+/* Farmer Styles */
+.farmer-skin {
+    fill: #FDE0D3;
+}
+
+.farmer-hat-primary {
+    fill: #FBC02D;
+}
+
+/* Hat Dome */
+.farmer-hat-secondary {
+    fill: #F9A825;
+}
+
+/* Hat Brim */
+.farmer-hair {
+    fill: #5D4037;
+}
+
+.farmer-eye {
+    fill: #3E2723;
+}
+
+.farmer-mouth {
+    fill: none;
+    stroke: #E64A19;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+.farmer-cheek {
+    fill: #F48FB1;
+    opacity: 0.6;
+}
+
+.farmer-shirt {
+    fill: #FFFFFF;
+}
+
+.farmer-overalls {
+    fill: #039BE5;
+}
+
+/* Brighter Blue */
+.farmer-overalls-dark {
+    fill: #0277BD;
+}
+
+/* For back leg or details */
+.farmer-shoes {
+    fill: #4E342E;
+}
+
+.farmer-leg {
+    transform-box: fill-box;
+    transform-origin: center top;
+    /* Pivot at hip */
+}
+
+.farmer-arm-group {
+    transform-box: fill-box;
+    transform-origin: 0px 0px;
+    /* Pivot at shoulder joint (0,0 of the group) */
+}
+
+.farmer-body-group {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}

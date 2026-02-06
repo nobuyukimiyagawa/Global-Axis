@@ -1,0 +1,42 @@
+/* =========================
+   Custom Cursor (Drone)
+========================= */
+html,
+body {
+  cursor: none !important;
+}
+
+/* リンクやボタンもカーソル消す */
+a,
+button,
+input,
+textarea,
+select,
+[role="button"] {
+  cursor: none !important;
+}
+
+.cursor-drone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  /* そのままでも良いくらいのサイズ感 */
+  height: 100px;
+  background-image: url("../images/cursor_drone.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+
+  /* 初期状態 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 画面内に入ったら表示 */
+body:hover .cursor-drone {
+  opacity: 1;
+}
