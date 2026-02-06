@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>事業内容 | Global Axis</title>
+    <meta name="description" content="Global Axisのサービス・事業内容についてご紹介します。" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cursor.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/diagram.css" />
+    <link rel="stylesheet" href="./css/stats.css" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script> <!-- Add Lucide -->
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/cursor.js"></script>
+    <script defer src="./js/diagram.js"></script>
+</head>
+
+<body>
+    <!-- Road/Truck Removed -->
+
+    <main id="business-top">
+        <div id="site-loader" aria-hidden="true">
+            <div class="loader-inner">
+                <img src="./images/logo_globalaxis.svg" alt="Global Axis" class="loader-logo">
+            </div>
+        </div>
+
+        <div class="goo-layer" aria-hidden="true">
+            <div class="goo" aria-hidden="true">
+                <span class="blob c-red   s-lg a-1"></span>
+                <span class="blob c-blue  s-md a-2"></span>
+                <span class="blob c-green s-lg a-3"></span>
+                <span class="blob c-dark  s-sm a-4"></span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container header__inner">
+                <a class="brand" href="./index.html" aria-label="TOPへ">
+                    <img class="brand__logo" src="./images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+                </a>
+
+                <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+                    <!-- News -->
+                    <a href="./news.html" class="nav-item">
+                        <span class="nav-face nav-face--en">News</span>
+                        <span class="nav-face nav-face--ja">お知らせ</span>
+                    </a>
+
+                    <!-- Business Dropdown (Renamed from Service) -->
+                    <div class="nav-item">
+                        <a href="./business.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Business</span>
+                            <span class="nav-face nav-face--ja">事業内容</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="./business/logistics.html">流通事業</a>
+                            <a href="./business/cold-chain-management.html">CCM事業</a>
+                            <a href="./business/consulting.html">コンサルティング</a>
+                            <a href="./business/finance.html">ファイナンス</a>
+                            <a href="./business/dx-solutions.html">DXソリューション</a>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy -->
+                    <a href="./company/philosophy.html" class="nav-item">
+                        <span class="nav-face nav-face--en">Philosophy</span>
+                        <span class="nav-face nav-face--ja">企業理念</span>
+                    </a>
+
+                    <!-- Company Dropdown -->
+                    <div class="nav-item">
+                        <a href="./company.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Company</span>
+                            <span class="nav-face nav-face--ja">会社情報</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="./company/overview.html">会社概要</a>
+                            <a href="./company/philosophy.html">企業理念</a>
+                            <a href="./company/structure.html">組織図</a>
+                        </div>
+                    </div>
+
+                    <a href="./recruit.html" class="nav-link">
+                        Recruit <span class="ext">↗</span>
+                    </a>
+                </nav>
+
+                <a class="btn btn--primary header__cta" href="./contact.html">Contact</a>
+                <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="drawer" aria-hidden="true">
+                <div class="drawer__inner container">
+                    <a href="./news.html">News</a>
+                    <a href="./business.html">Business</a>
+                    <a href="./company/philosophy.html">Philosophy</a>
+                    <a href="./company.html">Company</a>
+                    <a href="./recruit.html">Recruit</a>
+                    <a class="btn btn--primary" href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="kv" style="min-height: 50vh;">
+            <div class="container kv__inner">
+                <h1 class="kv__title rm-text">
+                    <span>B</span><span>u</span><span>s</span><span>i</span><span>n</span><span>e</span><span>s</span><span>s</span>
+                </h1>
+                <p class="kv__kicker rm-sub"><span>事業内容</span></p>
+            </div>
+        </section>
+
+        <!-- Catchphrase Section -->
+        <section class="flow-message">
+            <div class="flow-message-inner">
+                <!-- Main Catchphrase -->
+                <h1 class="fm-title">
+                    止まらない、<br style="display:block;" />
+                    <span class="fm-title-gradient">
+                        鮮度のリレー。
+                    </span>
+                </h1>
+
+                <!-- Lead Text -->
+                <div class="fm-lead-box">
+                    <span class="fm-quote top-left">“</span>
+
+                    <p class="fm-text">
+                        GlobalAxisが構築するサプライチェーンは、単なる運搬ではありません。
+                        仕入れから加工、配送までをシームレスに同期させるインテリジェント物流です。
+                    </p>
+
+                    <span class="fm-quote bottom-right">“</span>
+                </div>
+
+                <!-- Decoration Line -->
+                <div class="fm-deco">
+                    <div class="fm-line"></div>
+                    <div class="fm-dot"></div>
+                    <div class="fm-line reverse"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Business Workflow Diagram (Moved to top) -->
+        <section id="business-flow" style="margin-bottom: 60px;">
+            <div class="container">
+                <div class="d-wrapper">
+                    <!-- HEADER -->
+                    <div class="d-header">
+                        <h2>CCM 事業</h2>
+                    </div>
+
+                    <!-- MAIN GRID -->
+                    <div class="d-grid">
+
+                        <!-- LEFT INPUTS (Phase 0) -->
+                        <div class="d-col-left">
+                            <!-- Import -->
+                            <div class="d-input-group">
+                                <div class="d-input-row">
+                                    <div class="d-input-icon-box">
+                                        <div class="d-icon-frame" style="border-color:#f05a28;">
+                                            <div class="d-badge" style="background:#f05a28;">輸入品</div>
+                                            <!-- Improved Tomato Icon -->
+                                            <svg viewBox="0 0 24 24" class="d-svg-icon" fill="#f05a28">
+                                                <path
+                                                    d="M12,4C7.5,4,4,7.5,4,12c0,4.5,3.5,8,8,8s8-3.5,8-8C20,7.5,16.5,4,12,4z M12,2c0.6,0,1,0.4,1,1v1 c1.7,0.2,3,1.6,3,3.3V8h-2V7.3C14,6.6,13.4,6,12.7,6H11.3C10.6,6,10,6.6,10,7.3V8H8V7.3C8,5.6,9.3,4.2,11,4V3C11,2.4,11.4,2,12,2z" />
+                                            </svg>
+                                        </div>
+                                        <span class="d-input-text" style="color:#f05a28;">海外からの<br>輸入青果</span>
+                                    </div>
+                                    <div id="line-in-1" class="d-line-container">
+                                        <div class="d-line-label"><i data-lucide="snowflake" size="14"></i> コンテナ輸送・浜取
+                                        </div>
+                                        <i id="truck-in-1" data-lucide="truck" size="20" class="d-animate-truck"
+                                            style="display:none; top:-28px;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Domestic -->
+                            <div class="d-input-group">
+                                <div class="d-input-row">
+                                    <div class="d-input-icon-box">
+                                        <div class="d-icon-frame" style="border-color:#009b4f;">
+                                            <div class="d-badge" style="background:#009b4f;">国産品</div>
+                                            <!-- Improved Tomato Icon -->
+                                            <svg viewBox="0 0 24 24" class="d-svg-icon" fill="#009b4f">
+                                                <path
+                                                    d="M12,4C7.5,4,4,7.5,4,12c0,4.5,3.5,8,8,8s8-3.5,8-8C20,7.5,16.5,4,12,4z M12,2c0.6,0,1,0.4,1,1v1 c1.7,0.2,3,1.6,3,3.3V8h-2V7.3C14,6.6,13.4,6,12.7,6H11.3C10.6,6,10,6.6,10,7.3V8H8V7.3C8,5.6,9.3,4.2,11,4V3C11,2.4,11.4,2,12,2z" />
+                                            </svg>
+                                        </div>
+                                        <span class="d-input-text" style="color:#009b4f;">産地農家<br>地方 JA 組合</span>
+                                    </div>
+                                    <div id="line-in-2" class="d-line-container">
+                                        <div class="d-line-label"><i data-lucide="snowflake" size="14"></i> 輸配送</div>
+                                        <i id="truck-in-2" data-lucide="truck" size="20" class="d-animate-truck"
+                                            style="display:none; top:-28px;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CENTER (Phase 1) -->
+                        <div class="d-col-center">
+                            <div id="center-box" class="d-center-box">
+                                <i data-lucide="warehouse" class="d-bg-icon"></i>
+
+                                <div class="d-center-title">
+                                    <i id="center-icon" data-lucide="snowflake" size="32"></i>
+                                    物流センター
+                                </div>
+
+                                <div class="d-center-btn-list">
+                                    <div class="d-c-btn inactive" id="btn-storage">
+                                        <i data-lucide="snowflake" size="24"></i> 保管
+                                    </div>
+                                    <div class="d-c-grid">
+                                        <div class="d-c-btn inactive" id="btn-stock">
+                                            <i data-lucide="package" size="24"></i> 入出庫・在庫管理
+                                        </div>
+                                        <div class="d-c-btn inactive" id="btn-process">
+                                            <i data-lucide="settings" size="24"></i> 流通加工業務
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-col-center-bot">
+                                <div class="d-bot-btn bg-finance">
+                                    <i data-lucide="zap" size="24"></i> ファイナンス事業
+                                </div>
+                                <div class="d-bot-btn bg-dist">
+                                    <i data-lucide="shopping-bag" size="24"></i> 流通事業
+                                </div>
+                            </div>
+
+                            <!-- Stats Removed from Center Column -->
+                        </div>
+
+                        <!-- RIGHT OUTPUT (Phase 2) -->
+                        <div class="d-col-right">
+                            <div class="d-right-inner">
+                                <!-- Lines -->
+                                <div class="d-right-lines">
+                                    <!-- Dynamic Routes -->
+                                    <div class="d-delivery-route">
+                                        <div id="route-1-box" class="d-deliv-label"><i data-lucide="snowflake"
+                                                size="14"></i> センター配送</div>
+                                        <div id="line-out-1" class="d-line-container">
+                                            <i id="truck-out-1" data-lucide="truck" size="20" class="d-animate-truck"
+                                                style="display:none; top:-28px;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-delivery-route">
+                                        <div id="route-2-box" class="d-deliv-label"><i data-lucide="snowflake"
+                                                size="14"></i> 店舗配送</div>
+                                        <div id="line-out-2" class="d-line-container">
+                                            <i id="truck-out-2" data-lucide="truck" size="20" class="d-animate-truck"
+                                                style="display:none; top:-28px;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-delivery-route">
+                                        <div id="route-3-box" class="d-deliv-label"><i data-lucide="snowflake"
+                                                size="14"></i> 宅配</div>
+                                        <div id="line-out-3" class="d-line-container">
+                                            <i id="truck-out-3" data-lucide="truck" size="20" class="d-animate-truck"
+                                                style="display:none; top:-28px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Destinations -->
+                                <div class="d-right-dests">
+                                    <div class="d-dest-box">量販店センター<br>市場</div>
+                                    <div class="d-dest-box h-tall">食品小売業者・量販店</div>
+                                    <div class="d-dest-box h-tall">一般消費者</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Stats Section (Horizontal Row) -->
+                    <div class="stats-wrapper" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="stats-row"
+                            style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-val" style="font-size: 42px;">
+                                    <span class="stat-number" data-target="25000">0</span>
+                                    <span class="stat-unit">店舗</span>
+                                </div>
+                                <div class="stat-label">全国納品先スーパー</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-val" style="font-size: 42px;">
+                                    <span class="stat-number" data-target="300">0</span>
+                                    <span class="stat-unit">ヶ所</span>
+                                </div>
+                                <div class="stat-label">全国物流拠点</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-val" style="font-size: 42px;">
+                                    <span class="stat-number" data-target="3500">0</span>
+                                    <span class="stat-unit">センター</span>
+                                </div>
+                                <div class="stat-label">全国納品先センター</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-val" style="font-size: 42px;">
+                                    <span class="stat-number" data-target="80">0</span>
+                                    <span class="stat-unit">万cs</span>
+                                </div>
+                                <div class="stat-label">月間取扱量</div>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px; font-size: 13px; opacity: 0.7;">※2024年10月実績</p>
+                    </div>
+
+                    <!-- FOOTER -->
+                    <div class="d-footer">
+                        <div class="d-sys-status">
+                            <i data-lucide="cpu" class="d-spin" style="color:#3b82f6;"></i>
+                            <span class="d-sys-text">Real-time SCM Monitoring System Active</span>
+                        </div>
+                        <p style="font-size:12px; font-weight:700;">© GlobalAxis inc.</p>
+                    </div>
+
+                </div>
+
+                <script>
+                    (function () {
+                        let phase = 0; // 0=Input, 1=Center, 2=Output
+
+                        function updatePhase() {
+                            // Reset All
+                            // Input Lines
+                            document.querySelectorAll('#line-in-1, #line-in-2').forEach(el => {
+                                el.classList.remove('d-flow-line', 'd-active-line');
+                                el.style.background = '#f1f5f9';
+                            });
+                            document.querySelectorAll('#truck-in-1, #truck-in-2').forEach(el => el.style.display = 'none');
+                            // Reset Input Labels
+                            document.querySelectorAll('#line-in-1 .d-line-label, #line-in-2 .d-line-label').forEach(el => {
+                                el.classList.remove('d-label-active');
+                                const icon = el.querySelector('svg, i');
+                                if (icon) icon.classList.remove('d-spin');
+                            });
+
+                            // Center
+                            const cBox = document.getElementById('center-box');
+                            const cIcon = document.getElementById('center-icon');
+                            cBox.classList.remove('d-active-pulse');
+                            cBox.style.backgroundColor = '#fff';
+                            cIcon.classList.remove('d-spin');
+                            document.querySelectorAll('.d-c-btn').forEach(btn => {
+                                btn.classList.remove('active');
+                                btn.classList.add('inactive');
+                            });
+
+                            // Output Lines
+                            document.querySelectorAll('#line-out-1, #line-out-2, #line-out-3').forEach(el => {
+                                el.classList.remove('d-flow-line', 'd-active-line');
+                                el.style.background = '#f1f5f9';
+                            });
+                            document.querySelectorAll('#truck-out-1, #truck-out-2, #truck-out-3').forEach(el => el.style.display = 'none');
+                            document.querySelectorAll('.d-deliv-label').forEach(el => {
+                                el.classList.remove('d-label-active');
+                                const icon = el.querySelector('svg, i');
+                                if (icon) icon.classList.remove('d-spin');
+                            });
+
+                            // Activate Current Phase
+                            if (phase === 0) {
+                                // INPUT PHASE
+                                document.querySelectorAll('#line-in-1, #line-in-2').forEach(el => {
+                                    el.classList.add('d-flow-line', 'd-active-line');
+                                    el.style.background = ''; // Clear inline style so gradient works
+                                });
+                                document.querySelectorAll('#truck-in-1, #truck-in-2').forEach(el => el.style.display = 'block');
+                                // Activate Input Labels
+                                document.querySelectorAll('#line-in-1 .d-line-label, #line-in-2 .d-line-label').forEach(el => {
+                                    el.classList.add('d-label-active');
+                                    const icon = el.querySelector('svg, i');
+                                    if (icon) icon.classList.add('d-spin');
+                                });
+                            }
+                            else if (phase === 1) {
+                                // CENTER PHASE
+                                cBox.classList.add('d-active-pulse');
+                                cBox.style.backgroundColor = '#f0f9ff'; // blue-50 very light
+                                cIcon.classList.add('d-spin');
+                                document.querySelectorAll('.d-c-btn').forEach(btn => {
+                                    btn.classList.remove('inactive');
+                                    btn.classList.add('active');
+                                });
+                            }
+                            else if (phase === 2) {
+                                // OUTPUT PHASE
+                                document.querySelectorAll('#line-out-1, #line-out-2, #line-out-3').forEach(el => {
+                                    el.classList.add('d-flow-line', 'd-active-line');
+                                    el.style.background = ''; // Clear inline style so gradient works
+                                });
+                                document.querySelectorAll('#truck-out-1, #truck-out-2, #truck-out-3').forEach(el => el.style.display = 'block');
+                                // Activate Output Labels (always visible, just style change)
+                                document.querySelectorAll('.d-deliv-label').forEach(el => {
+                                    el.classList.add('d-label-active');
+                                    const icon = el.querySelector('svg, i');
+                                    if (icon) icon.classList.add('d-spin');
+                                });
+                            }
+                        }
+
+                        // Loop
+                        setInterval(() => {
+                            phase = (phase + 1) % 3;
+                            updatePhase();
+                        }, 5000); // 5 seconds per phase
+
+                        // Initialize
+                        updatePhase();
+
+                        // Re-init lucide icons just in case
+                        if (window.lucide) window.lucide.createIcons();
+                    })();
+                </script>
+
+                <!-- Stats Section Removed (Moved to Center Column) -->
+            </div>
+        </section>
+
+        <!-- Stats Section Moved to #business-flow -->
+
+        <!-- Flow Diagram Section -->
+        <section class="section">
+            <div class="section__inner">
+                <div class="container">
+                    <div class="modern-cards">
+                        <!-- 1. Logistics -->
+                        <a href="./business/logistics.html" class="m-card">
+                            <div class="m-card-icon">
+                                <i data-lucide="shopping-bag" size="28"></i>
+                            </div>
+                            <h3 class="m-card-title">流通事業</h3>
+                            <p class="m-card-text">青果の仕入れ・販売を中心とした流通サービス。</p>
+                            <span class="m-card-arrow">Read More →</span>
+                        </a>
+
+                        <!-- 2. Consulting -->
+                        <a href="./business/consulting.html" class="m-card">
+                            <div class="m-card-icon">
+                                <i data-lucide="briefcase" size="28"></i>
+                            </div>
+                            <h3 class="m-card-title">コンサルティング事業</h3>
+                            <p class="m-card-text">コールドチェーンを軸にした一貫支援。</p>
+                            <span class="m-card-arrow">Read More →</span>
+                        </a>
+
+                        <!-- 3. CCM -->
+                        <a href="./business/cold-chain-management.html" class="m-card">
+                            <div class="m-card-icon">
+                                <i data-lucide="snowflake" size="28"></i>
+                            </div>
+                            <h3 class="m-card-title">CCM事業</h3>
+                            <p class="m-card-text">コールドチェーンマネジメント。</p>
+                            <span class="m-card-arrow">Read More →</span>
+                        </a>
+
+                        <!-- 4. Finance -->
+                        <a href="./business/finance.html" class="m-card">
+                            <div class="m-card-icon">
+                                <i data-lucide="zap" size="28"></i>
+                            </div>
+                            <h3 class="m-card-title">ファイナンス事業</h3>
+                            <p class="m-card-text">在庫リスク軽減と資金繰りの最適化。</p>
+                            <span class="m-card-arrow">Read More →</span>
+                        </a>
+
+                        <!-- 5. DX -->
+                        <a href="./business/dx-solutions.html" class="m-card">
+                            <div class="m-card-icon">
+                                <i data-lucide="cpu" size="28"></i>
+                            </div>
+                            <h3 class="m-card-title">DXソリューション事業</h3>
+                            <p class="m-card-text">AIと青果流通ノウハウの融合。</p>
+                            <span class="m-card-arrow">Read More →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Workflow Diagram (Faithful Reproduction) -->
+        <!-- Business Workflow Diagram Removed (Moved to top) -->
+
+    </main>
+    </div>
+    </section>
+
+    <div id="cursor-drone" class="cursor-drone"></div>
+    <script>
+        // Initialize Lucide icons for the new cards
+        if (window.lucide) window.lucide.createIcons();
+    </script>
+</body>
+
+</html>

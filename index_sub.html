@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Axis | 食品流通から、未来を変える。</title>
+    <meta name="description" content="“コールドチェーン”を基盤に、食品流通の未来を支える多彩なソリューションを提供。" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cursor.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/hero-anim.css" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/cursor.js"></script>
+    <script defer src="./js/hero-anim.js"></script>
+</head>
+
+<body>
+    <!-- Original Hero (Road/Truck) Removed per user request -->
+
+    <main id="top">
+        <!-- Loader -->
+        <div id="site-loader" aria-hidden="true">
+            <div class="loader-inner">
+                <img src="./images/logo_globalaxis.svg" alt="Global Axis" class="loader-logo">
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container header__inner">
+                <a class="brand" href="#top" aria-label="TOPへ">
+                    <img class="brand__logo" src="./images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+                </a>
+
+                <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+                    <!-- News -->
+                    <a href="./news.html" class="nav-item">
+                        <span class="nav-face nav-face--en">News</span>
+                        <span class="nav-face nav-face--ja">お知らせ</span>
+                    </a>
+
+                    <!-- Business Dropdown (Renamed from Service) -->
+                    <div class="nav-item">
+                        <a href="./business.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Business</span>
+                            <span class="nav-face nav-face--ja">事業内容</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="./business/logistics.html">流通事業</a>
+                            <a href="./business/cold-chain-management.html">CCM事業</a>
+                            <a href="./business/consulting.html">コンサルティング</a>
+                            <a href="./business/finance.html">ファイナンス</a>
+                            <a href="./business/dx-solutions.html">DXソリューション</a>
+                        </div>
+                    </div>
+
+                    <!-- Philosophy -->
+                    <a href="./company/philosophy.html" class="nav-item">
+                        <span class="nav-face nav-face--en">Philosophy</span>
+                        <span class="nav-face nav-face--ja">企業理念</span>
+                    </a>
+
+                    <!-- Company Dropdown -->
+                    <div class="nav-item">
+                        <a href="./company.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Company</span>
+                            <span class="nav-face nav-face--ja">会社情報</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="./company/overview.html">会社概要</a>
+                            <a href="./company/philosophy.html">企業理念</a>
+                            <a href="./company/structure.html">組織図</a>
+                        </div>
+                    </div>
+
+                    <a href="./recruit.html" class="nav-link">
+                        Recruit <span class="ext">↗</span>
+                    </a>
+                </nav>
+
+
+                <a class="btn btn--primary header__cta" href="./contact.html">Contact</a>
+
+                <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="drawer" aria-hidden="true">
+                <div class="drawer__inner container">
+                    <a href="./news.html">News</a>
+                    <a href="./business.html">Business</a>
+                    <a href="./company/philosophy.html">Philosophy</a>
+                    <a href="./company.html">Company</a>
+                    <a href="./recruit.html">Recruit</a>
+                    <a class="btn btn--primary" href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- KV -->
+        <section class="kv" aria-label="キービジュアル">
+            <!-- Hero Animation Layer -->
+            <div id="hero-anim" class="hero-anim" aria-hidden="true">
+                <svg class="ha-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <!-- Simple Gradients or Filters if needed -->
+                    </defs>
+
+                    <!-- Sky / Env -->
+                    <g id="ha-scene" transform="translate(400, 450)"> <!-- Centered bottom-ish -->
+
+                        <!-- Rain (Group of drops) - Positioned higher intially -->
+                        <g id="ha-rain-group" transform="translate(0, -300)">
+                            <circle class="rain-drop" cx="-50" cy="0" r="4" />
+                            <circle class="rain-drop" cx="20" cy="-40" r="5" />
+                            <circle class="rain-drop" cx="60" cy="20" r="3" />
+                            <circle class="rain-drop" cx="-30" cy="-80" r="4" />
+                            <circle class="rain-drop" cx="40" cy="-120" r="5" />
+                        </g>
+
+                        <!-- Sun -->
+                        <!-- Sun -->
+                        <g id="ha-sun" transform="translate(150, -250)">
+                            <!-- Core -->
+                            <circle r="40" class="sun-core" />
+
+                            <!-- Rays (Radial) -->
+                            <g class="sun-rays">
+                                <!-- 8 Rays, rotated around center (0,0) -->
+                                <!-- Ray 1: Top (0 deg) -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" />
+                                <!-- Ray 2: 45 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(45)" />
+                                <!-- Ray 3: 90 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(90)" />
+                                <!-- Ray 4: 135 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(135)" />
+                                <!-- Ray 5: 180 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(180)" />
+                                <!-- Ray 6: 225 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(225)" />
+                                <!-- Ray 7: 270 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(270)" />
+                                <!-- Ray 8: 315 deg -->
+                                <ellipse class="sun-ray" cx="0" cy="-65" rx="6" ry="18" transform="rotate(315)" />
+                            </g>
+                        </g>
+
+                        <!-- Soil (Base) -->
+                        <g id="ha-soil-group" transform="translate(0, 0)">
+                            <!-- Simple mound -->
+                            <path id="ha-soil" class="soil" d="M-100,0 Q0,-40 100,0 Z" />
+                        </g>
+
+                        <!-- Plant Group -->
+                        <g id="ha-plant">
+                            <!-- Sprout -->
+                            <path id="ha-sprout" class="sprout"
+                                d="M0,0 Q-10,-40 0,-60 Q10,-40 0,0 M0,-60 Q-20,-80 -40,-60 Q-20,-40 0,-60 M0,-60 Q20,-80 40,-60 Q20,-40 0,-60"
+                                stroke-width="4" stroke="var(--green)" fill="none" />
+
+                            <!-- Tree (Initially hidden) -->
+                            <g id="ha-tree-group" style="opacity: 0;">
+                                <!-- Trunk -->
+                                <path class="tree-trunk" d="M-10,0 L-5,-100 L5,-100 L10,0 Z" />
+                                <!-- Foliage -->
+                                <circle class="tree-foliage" cx="0" cy="-140" r="80" />
+                                <circle class="tree-foliage" cx="-50" cy="-120" r="60" />
+                                <circle class="tree-foliage" cx="50" cy="-120" r="60" />
+
+                                <!-- Apples -->
+                                <g id="ha-apples">
+                                    <circle class="apple" cx="-30" cy="-140" r="12" />
+                                    <circle class="apple" cx="30" cy="-170" r="14" />
+                                    <circle class="apple" cx="0" cy="-100" r="10" />
+                                    <circle class="apple" cx="50" cy="-130" r="13" />
+                                    <circle class="apple" cx="-50" cy="-110" r="11" />
+                                </g>
+                            </g>
+                            <!-- Orchard (Background Trees) -->
+                            <g id="ha-orchard" style="opacity: 0;">
+                                <!-- Left Tree (Smaller) -->
+                                <g transform="translate(-120, -20) scale(0.7)">
+                                    <path class="tree-trunk" d="M-10,0 L-5,-100 L5,-100 L10,0 Z" />
+                                    <circle class="tree-foliage" cx="0" cy="-140" r="80" style="opacity: 0.8" />
+                                    <circle class="apple" cx="-20" cy="-140" r="12" />
+                                    <circle class="apple" cx="20" cy="-130" r="12" />
+                                </g>
+                                <!-- Right Tree (Smaller) -->
+                                <g transform="translate(120, -20) scale(0.7)">
+                                    <path class="tree-trunk" d="M-10,0 L-5,-100 L5,-100 L10,0 Z" />
+                                    <circle class="tree-foliage" cx="0" cy="-140" r="80" style="opacity: 0.8" />
+                                    <circle class="apple" cx="0" cy="-150" r="12" />
+                                    <circle class="apple" cx="30" cy="-120" r="12" />
+                                </g>
+                            </g>
+
+                            <!-- Farmer Character (Rigged for Animation) -->
+                            <g id="ha-farmer" transform="translate(300, 0)" style="opacity: 0;">
+                                <!-- Start further right -->
+
+                                <!-- Legs (Back) -->
+                                <g id="farmer-leg-l" class="farmer-leg" transform="translate(-8, -25)">
+                                    <rect width="10" height="25" rx="5" class="farmer-overalls-dark" />
+                                    <path d="M0,20 L10,20 L10,25 L0,25 Z" class="farmer-shoes" />
+                                </g>
+                                <!-- Legs (Front) -->
+                                <g id="farmer-leg-r" class="farmer-leg" transform="translate(8, -25)">
+                                    <rect width="10" height="25" rx="5" class="farmer-overalls" />
+                                    <path d="M0,20 L10,20 L10,25 L0,25 Z" class="farmer-shoes" />
+                                </g>
+
+                                <!-- Body Group (Bobbing) -->
+                                <g id="farmer-body-group" transform="translate(0, -25)">
+
+                                    <!-- Arm (Left/Harvesting) - Back Arm (Behind Body) -->
+                                    <g id="farmer-arm-l" class="farmer-arm-group" transform="translate(-14, -30)">
+                                        <!-- Sleeve -->
+                                        <rect class="farmer-shirt" x="-4" y="0" width="8" height="15" rx="4" />
+                                        <!-- Forearm -->
+                                        <rect class="farmer-skin" x="-3" y="10" width="6" height="15" rx="3" />
+                                        <!-- Hand -->
+                                        <circle class="farmer-skin" cx="0" cy="25" r="4" />
+                                    </g>
+
+                                    <!-- Torso -->
+                                    <path class="farmer-shirt" d="M-16,-30 L16,-30 L16,0 L-16,0 Z" />
+                                    <path class="farmer-overalls"
+                                        d="M-16,0 L-16,-20 L-10,-35 L10,-35 L16,-20 L16,0 Z" />
+                                    <!-- Buttons -->
+                                    <circle cx="-10" cy="-30" r="2" fill="#FFB74D" />
+                                    <circle cx="10" cy="-30" r="2" fill="#FFB74D" />
+
+                                    <!-- Head Group -->
+                                    <g transform="translate(0, -35)">
+                                        <!-- Face -->
+                                        <circle class="farmer-skin" cx="0" cy="-10" r="18" />
+                                        <!-- Hair -->
+                                        <path class="farmer-hair" d="M-16,-12 Q0,-24 16,-12" stroke-width="4"
+                                            stroke-linecap="round" fill="none" />
+
+                                        <!-- Hat -->
+                                        <ellipse class="farmer-hat-secondary" cx="0" cy="-20" rx="24" ry="6" />
+                                        <path class="farmer-hat-primary" d="M-14,-22 Q0,-42 14,-22 Z" />
+
+                                        <!-- Face Details -->
+                                        <circle class="farmer-eye" cx="-6" cy="-8" r="1.5" />
+                                        <circle class="farmer-eye" cx="6" cy="-8" r="1.5" />
+                                        <path class="farmer-mouth" d="M-4,-2 Q0,2 4,-2" />
+                                        <circle class="farmer-cheek" cx="-10" cy="-4" r="2.5" />
+                                        <circle class="farmer-cheek" cx="10" cy="-4" r="2.5" />
+                                    </g>
+
+                                    <!-- Arm (Right/Idle) - Front Arm -->
+                                    <g id="farmer-arm-r" transform="translate(14, -30)">
+                                        <!-- Simple Static Arm -->
+                                        <rect class="farmer-shirt" x="-4" y="0" width="8" height="15" rx="4"
+                                            transform="rotate(-10)" />
+                                        <rect class="farmer-skin" x="-3" y="10" width="6" height="15" rx="3"
+                                            transform="rotate(-10)" />
+                                        <circle class="farmer-skin" cx="2" cy="24" r="4" />
+                                    </g>
+                                </g>
+                            </g>
+
+                            <!-- Basket Group -->
+                            <g id="ha-basket" transform="translate(340, 0)" style="opacity: 0;">
+                                <path d="M-15,0 L-20,-20 L20,-20 L15,0 Z" fill="#D4A373" stroke="#8D6E63"
+                                    stroke-width="2" />
+                                <path d="M-20,-20 Q0,-40 20,-20" fill="none" stroke="#8D6E63" stroke-width="2" />
+                            </g>
+
+                            <!-- Truck Group -->
+                            <g id="ha-truck" transform="translate(450, 0)" style="opacity: 0;">
+                                <!-- Start off-screen/hidden -->
+                                <!-- Wheels -->
+                                <circle cx="-20" cy="0" r="8" fill="#333" />
+                                <circle cx="20" cy="0" r="8" fill="#333" />
+                                <!-- Chassis -->
+                                <rect x="-35" y="-10" width="70" height="10" fill="#555" />
+                                <!-- Cabin -->
+                                <path d="M10,-10 L10,-30 L30,-30 L35,-10 Z" fill="#0095D9" />
+                                <!-- Bed -->
+                                <rect x="-35" y="-25" width="45" height="15" fill="#E0E0E0" stroke="#999"
+                                    stroke-width="2" />
+                            </g>
+            </div>
+            <div class="container kv__inner">
+                <h1 class="kv__title rm-text">
+                    <span>食</span><span>品</span><span>流</span><span>通</span><span>か</span><span>ら</span><span>、</span>
+                    <span>未</span><span>来</span><span>を</span><span>変</span><span>え</span><span>る</span><span>。</span>
+                </h1>
+                <p class="kv__kicker rm-sub">
+                    <span>Changing</span>
+                    <span>The</span>
+                    <span>Future</span>
+                    <span>Through</span>
+                    <span>Food</span>
+                    <span>Distribution</span>
+                </p>
+            </div>
+            <!-- Goo filter -->
+            <svg class="defs" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="metaball">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 28 -10" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                    </filter>
+                </defs>
+            </svg>
+        </section>
+
+        <div class="content-wrapper">
+            <section id="service" class="section">
+                <div class="section__inner">
+                    <div class="container">
+
+                        <div class="section__head section__head-row">
+                            <h2 class="section__title rm-title">サービス</h2>
+                            <a href="./business.html" class="view-more-link">もっと見る →</a>
+                        </div>
+                        <p class="section__sub rm-title">変化に対応した、柔軟で確かな提案を。</p>
+
+                        <div class="service-layout">
+
+                            <!-- 1行目：3カラム (流通, コンサル, CCM) -->
+                            <div class="service-row three-col">
+
+                                <a href="./business/logistics.html" class="card card--with-image icon-card">
+                                    <article>
+                                        <div class="card__image img-reveal icon-mode">
+                                            <img src="./images/iso_logistics.png" alt="流通事業" class="rm-image">
+                                        </div>
+                                        <div class="card__body">
+                                            <div class="card__no rm-title">01</div>
+                                            <h3 class="card__title rm-title">流通事業</h3>
+                                            <p class="card__text">青果市場の幅広いネットワークを活かし、仕入れから販売まで一貫した流通ソリューションを提供します。</p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                                <a href="./business/consulting.html" class="card card--with-image icon-card">
+                                    <article>
+                                        <div class="card__image img-reveal icon-mode">
+                                            <img src="./images/iso_consulting.png" alt="コンサルティング事業" class="rm-image">
+                                        </div>
+                                        <div class="card__body">
+                                            <div class="card__no rm-title">02</div>
+                                            <h3 class="card__title rm-title">コンサルティング</h3>
+                                            <p class="card__text">現場の課題解決から戦略立案まで。物流のプロフェッショナルが最適なSCM構築を支援します。</p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                                <a href="./business/cold-chain-management.html" class="card card--with-image icon-card">
+                                    <article>
+                                        <div class="card__image img-reveal icon-mode">
+                                            <img src="./images/iso_ccm.png" alt="CCM事業" class="rm-image">
+                                        </div>
+                                        <div class="card__body">
+                                            <div class="card__no rm-title">03</div>
+                                            <h3 class="card__title rm-title">CCM事業</h3>
+                                            <p class="card__text">温度管理を徹底したコールドチェーン物流プラットフォームで、鮮度と品質を守り抜きます。</p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                            </div>
+
+                            <!-- 2行目：2カラム (Finance, DX) -->
+                            <div class="service-row two-col">
+
+                                <a href="./business/finance.html" class="card card--with-image icon-card">
+                                    <article>
+                                        <div class="card__image img-reveal icon-mode">
+                                            <img src="./images/iso_finance.png" alt="ファイナンス事業" class="rm-image">
+                                        </div>
+                                        <div class="card__body">
+                                            <div class="card__no rm-title">04</div>
+                                            <h3 class="card__title rm-title">ファイナンス</h3>
+                                            <p class="card__text">物流事業者に特化したファイナンス支援で、キャッシュフローの改善と事業成長をバックアップします。</p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                                <a href="./business/dx-solutions.html" class="card card--with-image icon-card">
+                                    <article>
+                                        <div class="card__image img-reveal icon-mode">
+                                            <img src="./images/iso_dx.png" alt="DXソリューション事業" class="rm-image">
+                                        </div>
+                                        <div class="card__body">
+                                            <div class="card__no rm-title">05</div>
+                                            <h3 class="card__title rm-title">DXソリューション</h3>
+                                            <p class="card__text">デジタル技術で物流現場を変革。業務効率化ツールから基幹システム開発まで対応可能です。</p>
+                                        </div>
+                                    </article>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="stats" class="section">
+                <div class="section__inner">
+                    <div class="container">
+
+                        <div class="section__head section__head-row">
+                            <h2 class="section__title rm-title">数字で見る Global Axis</h2>
+                            <a href="./company.html" class="view-more-link">もっと見る →</a>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="1284">0</div>
+                                <p class="stat-label">取り扱い件数</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="367">0</div>
+                                <p class="stat-label">物流パートナー</p>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="59">0</div>
+                                <p class="stat-label">全国ネットワーク</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Philosophy -->
+            <section id="philosophy" class="section">
+                <div class="section__inner">
+                    <div class="container">
+                        <div class="section__head section__head-row">
+                            <h2 class="section__title rm-title">企業理念</h2>
+                            <a href="./company/philosophy.html" class="view-more-link">もっと見る →</a>
+                        </div>
+
+                        <div class="panel">
+                            <h3 class="panel__title">食品流通の未来を変革し、人と社会に持続可能な価値を届ける。</h3>
+                            <p class="panel__text">
+                                私たちは、青果を中心とした食品を通じて、健康、経済、環境、すべての面で豊かさを育む循環を創ります。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sustainability -->
+            <section class="section">
+                <div class="section__inner">
+                    <div class="container">
+                        <div class="section__head section__head-row">
+                            <h2 class="section__title rm-title">SDGsに向けた取り組み</h2>
+                            <a href="./company.html" class="view-more-link">もっと見る →</a>
+                        </div>
+
+                        <div class="grid2">
+                            <div class="listbox">
+                                <h3>カーボンニュートラルの実現に向けた取り組み</h3>
+                                <ul>
+                                    <li>運送効率化による二酸化炭素ガス排出削減</li>
+                                    <li>太陽光発電パネルの設置</li>
+                                    <li>EV車の活用</li>
+                                    <li>モーダルシフトの推進</li>
+                                </ul>
+                            </div>
+
+                            <div class="listbox">
+                                <h3>平等な雇用の実現に向けた取り組み</h3>
+                                <ul>
+                                    <li>短時間労働が可能な高齢ドライバーの雇用</li>
+                                    <li>外国人技能実習生の同一労働同一賃金</li>
+                                </ul>
+
+                                <h3 class="mt24">持続可能な事業の推進</h3>
+                                <ul>
+                                    <li>物流や食品業界の最適化を目指した継続的な改善と革新</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Company (Removed per user request) -->
+            <!-- <section id="company" class="section"> ... </section> -->
+
+            <!-- Recruit -->
+            <section id="recruit" class="section">
+                <div class="section__inner">
+                    <div class="container">
+                        <div class="section__head section__head-row">
+                            <h2 class="section__title rm-title">採用情報</h2>
+                            <a href="./recruit.html" class="view-more-link">もっと見る →</a>
+                        </div>
+
+                        <div class="panel">
+                            <p class="panel__text">
+                                Global Axisでは新規事業のほか、食品流通の新しい未来を推進する仲間を募集しています。
+                                採用に関するお問い合わせは、下記のメールアドレスまたはお電話番号までご連絡ください。
+                            </p>
+                            <div class="contactline">
+                                <a href="mailto:info@globalaxis.jp">info@globalaxis.jp</a>
+                                <span class="dot">•</span>
+                                <a href="tel:0368115909">03-6811-5909</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="section section--cta">
+                <div class="section__inner">
+                    <div class="container">
+                        <div class="cta">
+                            <div>
+                                <h2 class="cta__title rm-title">お問い合わせ</h2>
+                                <p class="cta__text">
+                                    当社へのお問い合わせにつきましては、お電話・メール、問い合わせフォームにて承っております。
+                                </p>
+                                <p class="cta__meta">
+                                    TEL 03-6811-5909 / FAX 03-6811-5908<br />
+                                    〒106-0047 東京都港区南麻布2-14-13 麻布山口ビル2階
+                                </p>
+                            </div>
+
+                            <div class="cta__actions">
+                                <a class="btn btn--primary" href="mailto:info@globalaxis.jp">メールで問い合わせ</a>
+                                <a class="btn btn--ghost" href="tel:0368115909">電話する</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <div class="breadcrumb">
+        <div class="container breadcrumb__inner">
+            <span>TOP</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <small>© Global Axis inc.</small>
+            <a href="https://globalaxis.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-drone" class="cursor-drone"></div>
+</body>
+
+</html>
