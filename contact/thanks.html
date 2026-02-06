@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ完了 | Global Axis</title>
+    <meta name="description" content="お問い合わせを受け付けました。" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/cursor.css" />
+    <link rel="stylesheet" href="../css/dropdown.css" />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/cursor.js"></script>
+</head>
+
+<body>
+    <div class="road-bg" aria-hidden="true"></div>
+
+    <div class="truck-wrap">
+        <img src="../images/truck-svgrepo-com.svg" class="truck" alt="">
+        <div class="scroll-hint">Scroll Down</div>
+    </div>
+
+    <main id="contact-thanks">
+        <div id="site-loader" aria-hidden="true">
+            <div class="loader-inner">
+                <img src="../images/logo_globalaxis.svg" alt="Global Axis" class="loader-logo">
+            </div>
+        </div>
+
+        <div class="goo-layer" aria-hidden="true">
+            <div class="goo" aria-hidden="true">
+                <span class="blob c-blue  s-lg a-5"></span>
+                <span class="blob c-green s-md a-6"></span>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="container header__inner">
+                <a class="brand" href="../index.html" aria-label="TOPへ">
+                    <img class="brand__logo" src="../images/logo_globalaxis.svg" alt="株式会社グローバル・アクシス" />
+                </a>
+
+                                <nav class="nav nav--flip" aria-label="グローバルナビゲーション">
+                    <!-- Service Dropdown -->
+                    <div class="nav-item">
+                        <a href="../business.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Service</span>
+                            <span class="nav-face nav-face--ja">サービス</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../business/logistics.html">流通事業</a>
+                            <a href="../business/cold-chain-management.html">CCM事業</a>
+                            <a href="../business/consulting.html">コンサルティング</a>
+                            <a href="../business/finance.html">ファイナンス</a>
+                            <a href="../business/dx-solutions.html">DXソリューション</a>
+                        </div>
+                    </div>
+
+                    <!-- Company Dropdown -->
+                    <div class="nav-item">
+                        <a href="../company.html" style="display:block; width:100%; height:100%;">
+                            <span class="nav-face nav-face--en">Company</span>
+                            <span class="nav-face nav-face--ja">会社情報</span>
+                        </a>
+                        <div class="nav-drop">
+                            <a href="../company/overview.html">会社概要</a>
+                            <a href="../company/philosophy.html">企業理念</a>
+                            <a href="../company/structure.html">組織図</a>
+                        </div>
+                    </div>
+
+                    <!-- News -->
+                    <a href="../news.html" class="nav-item">
+                        <span class="nav-face nav-face--en">News</span>
+                        <span class="nav-face nav-face--ja">お知らせ</span>
+                    </a>
+
+                    <a href="../recruit.html" class="nav-link">
+                        Recruit <span class="ext">↗</span>
+                    </a>
+                </nav>
+
+                <a class="btn btn--primary header__cta" href="../contact.html">Contact</a>
+                <button class="hamburger" type="button" aria-label="メニューを開く" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+            <div class="drawer" aria-hidden="true">
+                                <div class="drawer__inner container">
+                    <a href="../business.html">Service</a>
+                    <a href="../company.html">Company</a>
+                    <a href="../news.html">News</a>
+                    <a href="../recruit.html">Recruit</a>
+                    <a class="btn btn--primary" href="../contact.html">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="section" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+            <div class="container" style="text-align: center;">
+                <h1 style="font-size: 24px; font-weight: 900; margin-bottom: 24px;">お問い合わせを受け付けました。</h1>
+                <p style="margin-bottom: 32px;">
+                    担当者より折り返しご連絡いたします。<br>今しばらくお待ちください。
+                </p>
+                <a href="../index.html" class="btn btn--primary">TOPページへ戻る</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <small>© Global Axis inc.</small>
+            <a href="https://globalaxis.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+    <div id="cursor-drone" class="cursor-drone"></div>
+</body>
+
+</html>
